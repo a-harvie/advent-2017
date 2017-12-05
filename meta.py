@@ -11,7 +11,7 @@ args = parser.parse_args()
 now = datetime.now()
 output = json.dumps({'timestamp': now.timestamp(), 'date': now.isoformat()})
 
-currday = args.day.zfill(1)
+currday = args.day.zfill(2)
 dirpath = os.path.relpath(currday)
 
 if not os.path.exists(dirpath):
